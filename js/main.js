@@ -10,10 +10,17 @@ const { createApp } = Vue;
 
 createApp({
     data() {
+        return {
+            // array che conterrà le mail generate
+            arrayEmail: [],
+            numberEmail: 10
+        }
 
     },
     methods: {
         
+
+
     }
 
 
