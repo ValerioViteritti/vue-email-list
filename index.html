@@ -17,19 +17,19 @@
     <script src="./js/MyLibrary.js"></script>
     <!-- LINK VUE LAST VERSION -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- LINK AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     
 </head>
 <body>
-    <div id="app">
-        <h2 v-for="email" v-show="arrayEmail.length === numberEmail"></h2>
-
+    <div id="app" class="text-center mt-5">
+        <!-- Lista email visibile solo dopo averle generate tutte -->
+        <ul v-if="arrayEmail.length === numberEmail">
+            <li v-for="email in arrayEmail" :key="email" class="mb-1">{{ email }}</li>
+        </ul>
     </div>
-
-    
-    
 
     <!-- LINK JS MAIN -->
     <script src="./js/main.js"></script>
-
 </body>
 </html>
